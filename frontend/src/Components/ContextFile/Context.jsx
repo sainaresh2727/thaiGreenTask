@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import Axios from 'axios'
+import { useRef } from 'react'
 
 
 export let My_Context=createContext()
@@ -58,15 +59,19 @@ function Context({children}) {
   let PendingTaskLength=PendingTask.length
 
 
+  let ConfirmModel=useRef()
   function UpdateTask(id){
    let CompletedTasks= Tasks.map((x,y)=>{
         return x.id===id ? {...x,completed:!x.completed}: x
     })
+    let ModalShow=new window.bootstrap.Modal(ConfirmModel.current)
+    ModalShow.show()
     setTasks(CompletedTasks)
   }
+
   return (
    <>
-   <My_Context.Provider value={{Users,CompletedTask,PendingTask,Tasks,UpdateTask,CompletedTaskLength,PendingTaskLength}}>
+   <My_Context.Provider value={{Users,CompletedTask,PendingTask,Tasks,UpdateTask,CompletedTaskLength,PendingTaskLength,ConfirmModel}}>
     {children}
    </My_Context.Provider>
    </>
