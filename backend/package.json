@@ -1,4 +1,11 @@
 {
+  "name": "task-backend",
+  "version": "1.0.0",
+  "description": "Backend for task app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "axios": "^1.12.2",
     "cors": "^2.8.5",
