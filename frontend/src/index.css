@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* ===========HEADER CSS STARTS============= */
+#HeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===========HEADER CSS ENDS============= */
+/* ============USERTASK CSS STARTS========= */
+#UserTaskCard{
+    box-shadow: 0px 0px 20px #802bf6;
+}
+#UserTaskCardBody h5{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+#UserTaskCardBody span{
+    color: blue;
+    font-weight: bold;
+}
+/* ============USERTASK CSS ENDS========= */
