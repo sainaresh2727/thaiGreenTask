@@ -12,7 +12,7 @@ function Context({children}) {
     
     async function GettingUsers() {
       try{
-          let User=await Axios.get('http://localhost:5000/api/users')
+          let User=await Axios.get('https://thaigreentask-1.onrender.com/api/users')
           setUsers(User.data)
           
       }
@@ -35,7 +35,7 @@ function Context({children}) {
   let [Tasks,setTasks]=useState([])
   async function FetchTask() {
     try{
-        let FTasks=await Axios.get('http://localhost:5000/api/Tasks')
+        let FTasks=await Axios.get('https://thaigreentask-1.onrender.com/api/Tasks')
         setTasks(FTasks.data)
     }
     catch(err){
