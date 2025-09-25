@@ -14,6 +14,8 @@ let Cors=require("cors")
 //AXIOS
 let Axios=require("axios")
 
+let port=process.env.PORT || 5000;
+
 App.use(Cors())
 
 //FETCHING USERS
@@ -40,7 +42,7 @@ App.get('/api/Tasks',async (req,res) => {
     }
 })
 
-App.listen(process.env.PORT,()=>{
+App.listen(port,()=>{
     console.log("SERVER RUNNING SUCCESSFULLY");
     
 })
