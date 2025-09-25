@@ -1,4 +1,8 @@
 
+//DOTENV
+let DotEnv=require("dotenv")
+DotEnv.config()
+
 //EXPRESS
 let Express=require("express")
 
@@ -36,7 +40,7 @@ App.get('/api/Tasks',async (req,res) => {
     }
 })
 
-App.listen(5000,()=>{
+App.listen(process.env.PORT,()=>{
     console.log("SERVER RUNNING SUCCESSFULLY");
     
 })
